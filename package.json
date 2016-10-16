@@ -9,7 +9,8 @@
     "start": "electron ./app --enable-logging",
     "dev": "NODE_ENV='development' npm run start",
     "electron-rebuild": "electron-rebuild",
-    "pack-mas": "electron-packager . --platform=mas --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='io.hackbuster.delight' --out=Build/"
+    "pack-mas": "electron-packager . --platform=mas --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='hack.buster.delight' --out=Build/",
+    "pack-darwin": "electron-packager . --platform=darwin --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='hack.buster.delight' --out=Build/"
   },
   "devDependencies": {
     "electron": "^1.4.3",

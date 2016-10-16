@@ -35,7 +35,8 @@ app.on('ready', function() {
 	// var cp = require('child_process')
 	// cp.exec('cd app', {})
 	// cp.exec('python -m SimpleHTTPServer 2333')
-	var subpy = require('child_process').spawn('sh', ['server.sh'])
+	let script_path = __dirname + '/server.sh'
+	var subpy = require('child_process').spawn('sh', [script_path])
 	var mainAddr = 'http://localhost:2333';
 
 	win = new BrowserWindow({
@@ -51,7 +52,7 @@ app.on('ready', function() {
 		win.loadURL('http://localhost:2333');
 	}, 1000);
 	
-	// win.webContents.openDevTools();
+	win.webContents.openDevTools();
 	win.on('closed', function() {
 		win = null;
 		subpy.kill('SIGINT');
