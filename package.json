@@ -1,16 +1,16 @@
 {
   "name": "Delight",
   "version": "1.0.0",
-  "main": "app/index.js",
+  "main": "index.js",
   "description": "Learn with delight, learn with Delight. Delight is a light-weight code editor and playground that helps connect teacher with students.",
   "author": "hACKbUSTER",
   "license": "ICS",
   "scripts": {
-    "start": "electron ./app --enable-logging",
+    "start": "electron . --enable-logging",
     "dev": "NODE_ENV='development' npm run start",
     "electron-rebuild": "electron-rebuild",
-    "pack-mas": "electron-packager . --platform=mas --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='hack.buster.delight' --out=Build/",
-    "pack-darwin": "electron-packager . --platform=darwin --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='hack.buster.delight' --out=Build/"
+    "pack-mas": "electron-packager . --platform=mas --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='hack.buster.delight' --out=../Build/",
+    "pack-darwin": "electron-packager . --platform=darwin --arch=x64 --icon='./icon/icon.icns' --app-bundle-id='hack.buster.delight' --out=../Build/"
   },
   "devDependencies": {
     "electron": "^1.4.3",
